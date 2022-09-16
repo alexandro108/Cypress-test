@@ -1,0 +1,26 @@
+{
+  "root": "e2e/tests-e2e",
+  "sourceRoot": "e2e/tests-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "deployed-e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "e2e/tests-e2e/cypress.json",
+        "tsConfig": "e2e/tests-e2e/tsconfig.e2e.json"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "lint": {
+      "executor": "@angular-devkit/build-angular:tslint",
+      "options": {
+        "tsConfig": ["e2e/tests-e2e/tsconfig.e2e.json"],
+        "exclude": ["**/node_modules/**", "!e2e/tests-e2e/**/*"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["kyc-web"]
+}
