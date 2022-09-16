@@ -14,7 +14,7 @@ import {
 import 'cypress-file-upload';
 import { should } from 'chai';
 
-describe('kyc-web-qa', () => {
+describe('tests-e2e', () => {
  
   describe('KYC passing', () => {
     const phone = getPhone();
